@@ -3,7 +3,7 @@
 class AddTransactionIdColumnToVersions < ActiveRecord::Migration
   def self.up
     add_column :versions, :transaction_id, :integer
-    add_index :versions, [:transaction_id], :name => 'idx_ids_b'
+    add_index :versions, [:transaction_id]
   end
 
   def self.down

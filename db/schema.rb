@@ -143,8 +143,8 @@ ActiveRecord::Schema.define(version: 20160503223632) do
     t.datetime "created_at"
     t.integer  "transaction_id"
     t.text     "object_changes", limit: 4294967295
-    t.index ["item_type", "item_id"], name: "idx_ids_a", length: {"item_type"=>191, "item_id"=>nil}, using: :btree
-    t.index ["transaction_id"], name: "idx_ids_b", using: :btree
+    t.index ["item_type", "item_id"], name: "index_versions_on_some_id", length: {"item_type"=>191, "item_id"=>nil}, using: :btree
+    t.index ["transaction_id"], name: "index_versions_on_transaction_id", using: :btree
   end
 
 end
