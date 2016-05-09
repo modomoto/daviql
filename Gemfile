@@ -8,9 +8,10 @@ gem 'rails', '5.0.0.beta2'
 
 #gem 'sqlite3'
 
-gem 'pg'
 gem 'mysql2'
 gem 'puma'
+gem 'mina'
+gem 'mina-sidekiq'
 
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
@@ -54,11 +55,6 @@ gem 'paper_trail'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
-# Use unicorn as the app server
-group :production do
-  gem 'unicorn'
-end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
