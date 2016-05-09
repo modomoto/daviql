@@ -1,8 +1,0 @@
-mysql:
-  name: MySql
-  mime-type: text/x-mysql
-
-
-postgresql:
-  name: postgreSQL
-  mime-type: text/x-plsql
