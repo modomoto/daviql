@@ -38,7 +38,7 @@ class CreateVersions < ActiveRecord::Migration
       #
       t.datetime :created_at
     end
-    add_index :versions, [:item_type, :item_id]
+    add_index :versions, [:item_type, :item_id], :name => 'index_versions_on_some_id'
   end
 
   private
