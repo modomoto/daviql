@@ -10,8 +10,8 @@ module ApplicationHelper
 
   def inline_dimension layout
     res = ""
-    res << "width: #{layout[:width]}px;" unless layout[:width].blank?
-    res << "height: #{layout[:height]}px;" unless layout[:height].blank?
+    res << "width: #{layout[:width]}px;" unless layout[:width].blank? || layout[:width] == 0
+    res << "height: #{layout[:height]}px;" unless layout[:height].blank? || layout[:height] == 0
   end
 
   def image_or_placeholder(image_url)
@@ -24,6 +24,13 @@ module ApplicationHelper
       name_or_email = user.email
     end
     name_or_email
+  end
+
+  def bar_canvas query, layout
+    tag = "<canvas id='barchart-#{@query.id}'"
+    tag = "#{tag} width=#{@layout[:width]}" unless layout[:width].blank? || layout[:width] == 0
+    tag = "#{tag} height=#{@layout[:height]}" unless layout[:height].blank? || layout[:height] == 0
+    "#{tag}/>"
   end
 
   def conditional_width layout
