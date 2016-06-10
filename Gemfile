@@ -17,7 +17,6 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap'
 gem 'rails-assets-tether'
-gem "font-awesome-rails"
 
 gem 'haml'
 # Gems used only for assets and not required
@@ -45,7 +44,6 @@ gem 'sidekiq-cron'
 
 gem 'bootstrap-wysihtml5-rails'
 gem 'jquery-datatables-rails'
-gem "font-awesome-rails"
 gem "google_visualr", ">= 2.1"
 
 gem 'codemirror-rails'
